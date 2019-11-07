@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: user-activity-table
+      author: thilanMJ
+      changes:
+        - createTable:
+            tableName: user_activity
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(10)
+              - column:
+                  name: is_deteled
+                  type: int(1)

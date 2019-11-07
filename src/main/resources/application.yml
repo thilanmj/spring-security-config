@@ -1,0 +1,25 @@
+logging:
+  file: logs/spring-boot-partone.log
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/codexmo_appoi?createDatabaseIfNotExist=true&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 1qaz2wsx
+  jackson:
+    serialization:
+      indent-output: true
+      write_dates_as_timestamps: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+server:
+  address: localhost
+  port: 8001
+
+liquibase:
+  change-log: classpath:db/changelog/db.changelog-master.yaml

@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - changeSet:
+        id: role-permission-table
+        author: thilanMJ
+

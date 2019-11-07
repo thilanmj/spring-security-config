@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: social-media-table
+      author: thilanMJ
+      changes:
+        - createTable:
+            tableName: social_media
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(10)
+              - column:
+                  name: is_deteled
+                  type: int(1)

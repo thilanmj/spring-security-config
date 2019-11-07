@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+        id: role-user-table
+        author: thilanMJ
+        changes:
+          - createTable:
+              tableName: role_user
+              columns:
+                - column:
+                    name: id
+                    type: int
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: name
+                    type: varchar(10)
